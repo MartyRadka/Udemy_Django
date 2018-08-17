@@ -1,0 +1,134 @@
+
+/* ---- LAYOUTS ----- */
+* {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: Roboto, san-serif;
+  background-color: #333;
+}
+
+.main {
+  background-color: #FFF;
+  padding: 40px;
+}
+
+.main-content {
+  display: flex;
+  padding: 10px 30px;
+  align-content: space-around;
+  margin: 40px auto;
+}
+
+/* ---- TYPOGRAPHY ----- */
+h1 {
+  color: #f1ecec;
+  text-align: center;
+  font-size: 2.5rem;
+  position: absolute;
+  margin: 0;
+  top: 45px;
+  right: 80px;
+}
+
+/*
+h1:after {
+    display: block;
+    height: 2px;
+    background-color: #f57e11;
+    content: " ";
+    width: 100px;
+    margin: 15px auto 0 auto;
+}
+*/
+
+
+/* ---- HEADER ----- */
+.header {
+  height: 645px;
+  background-image: url(images/rawpixel-561415-unsplash.jpg);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-nav {
+  position: absolute;
+  top: 100px;
+  right: 90px;
+  text-align: right;
+}
+
+.main-nav ul {
+  list-style-type: none;
+}
+
+.main-nav ul li a:link,
+.main-nav ul li a:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background-color: rgba(255, 252, 252, 0.6);
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin: 3px;
+  display: inline-block;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:active {
+  color: #f1ecec;
+  background-color: rgba(51, 51, 51, 0.7);
+}
+
+/* ---- SECTION-BLOG-POSTS ----- */
+.section-blog-posts {
+  background-color: #cbc8c8;
+  color: #333;
+  padding: 10px 30px;
+  width: 90%;
+}
+
+.section-blog-posts a:link,
+.section-blog-posts a:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+  color: #333;
+
+}
+
+.section-blog-posts a:hover,
+.section-blog-posts a:active {
+  color: #595757;
+  border-bottom: 2px solid #595757;
+}
+
+.section-articles {
+  padding-bottom: 10px;
+}
+
+.section-articles last-child {
+  padding-bottom: 0;
+}
+
+/* ---- SECTION-ABOUT ----- */
+.section-about-img {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+
+.section-about-img img {
+  width: 80%;
+  height: auto;
+}

@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  <title>Radka's Articles can be found here</title>
+</head>
+
+<body>
+  <div class="main"><!-- begin main -->
+    <header class="header">
+      <h1>My personal blog</h1>
+      <div class="main-nav">
+        <ul>
+          <!-- change the home link, home link must be use only from another page to returt to home page!!!, but I keep it for now :) -->
+          <li><a href="/">Home</a></li>
+          <li><a href=" {% url 'about' %} ">About</a></li>
+          <li><a href=" {% url 'contact' %} ">Contact</a></li>
+        </ul>
+        {% block content %}
+
+        {% endblock %}
+      </div>
+    </header>
+
+    <div class="main-content"><!-- begin main-content -->
+      <section class="section-blog-posts">
+        {% block section-blog-posts %}
+
+        {% endblock %}
+      </section>
+
+      <section class="section-about">
+        <div class="section-about-img">
+          <img src="/static/css/images/IPhone_7_Jet_Black.svg">
+        </div>
+
+        <div class="section-about-info">
+          <h3><a href="">About me</h3>
+          <img src="" alt="post_image1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <span>Radka Marty</span>
+        </div>
+      </section>
+    </div><!--end main-content-->
+  </div><!--end main-->
+
+</body>
+
+
+</html>

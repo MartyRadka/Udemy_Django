@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block section-blog-posts %}
+
+{% for arti in object_list %}
+<section class="section-articles">
+  <h3><a href="{% url 'article_page' arti.pk %}">{{ arti.title }}</a></h3>
+  <img src="{% static 'css/images/posts/image1.jpg' %}" alt="">
+  <p>{{ arti.text }}</p>
+  <hr>
+</section>
+{% endfor %}
+
+{% endblock %}

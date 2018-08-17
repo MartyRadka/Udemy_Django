@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="detail">
+    <h2>{{ batman.title }}</h2>
+    <p>{{ batman.text }}</p>
+  </div>
+
+  <!-- batman.pk is the parametre - pk is responsible that this value is unique! -->
+  <h4><a href="{% url 'article_edit' batman.pk %}">Edit</a></h4>
+  <h4><a href="{% url 'article_delete' batman.pk %}">Delete</a></h4>
+
+{% endblock %}
